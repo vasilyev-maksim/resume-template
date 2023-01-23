@@ -40,7 +40,7 @@ export const Resume: React.FC = () => {
             id="contacts"
             bullets={[
               "City, Country",
-              <a href="tel:+994107119139">+999 999999999</a>,
+              <a href="tel:+999 999999999">+999 999999999</a>,
               {
                 label: "john.doe@gmail.com",
                 href: "mailto:john.doe@gmail.com",
