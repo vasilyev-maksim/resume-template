@@ -40,7 +40,7 @@ export const Resume: React.FC = () => {
             id="contacts"
             bullets={[
               "City, Country",
-              <a href="tel:+999 999999999">+999 999999999</a>,
+              <Phone countryCode="+999" number="999999999" />,
               {
                 label: "john.doe@gmail.com",
                 href: "mailto:john.doe@gmail.com",
@@ -291,19 +291,39 @@ const EducationSubsection: React.FC<{
 interface ILink {
   label: React.ReactNode;
   href: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  className?: string;
+  highlight?: boolean;
 }
 function isLink(x: any): x is ILink {
   return x.label !== undefined;
 }
-export const Link: React.FC<
-  ILink & { className?: string; highlight?: boolean }
-> = ({ label, href, className, highlight }) => {
+const Link: React.FC<ILink> = ({
+  label,
+  href,
+  className,
+  highlight,
+  target = "_blank",
+}) => {
   const a = (
-    <a target="_blank" href={href} className={className}>
+    <a target={target} href={href} className={className}>
       {label}
     </a>
   );
   return highlight ? <strong>{a}</strong> : a;
+};
+
+const Phone: React.FC<{ number: string; countryCode: string }> = ({
+  number,
+  countryCode,
+}) => {
+  return (
+    <Link
+      label={countryCode + " " + number}
+      target="_self"
+      href={"tel:" + countryCode + number}
+    />
+  );
 };
 
 type IBullet = React.ReactNode | ILink | IBullet[];
