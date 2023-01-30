@@ -7,8 +7,8 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "dev": "tsnd --respawn server.tsx",
-    "build": "tsnd server.tsx"
+    "dev": "tsnd --respawn ./src/server.tsx",
+    "build": "tsnd ./src/server.tsx"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
