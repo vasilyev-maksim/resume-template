@@ -5,7 +5,7 @@ import { Section } from "./core/Section";
 
 export const Experience: React.FC = () => {
   return (
-    <Section id="experience" header="Experience">
+    <Section header="Experience">
       <JobItem
         company={{
           name: "Google",

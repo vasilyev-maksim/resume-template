@@ -2,9 +2,9 @@ import * as React from "react";
 import { BulletedList } from "./core/BulletedList";
 import { Section } from "./core/Section";
 
-export const Skills: React.FC = () => {
+export const HardSkills: React.FC = () => {
   return (
-    <Section id="skills" header="Skills">
+    <Section header="Hard skills">
       <BulletedList
         bullets={[
           "HTML, CSS",

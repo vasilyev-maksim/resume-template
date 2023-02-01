@@ -5,7 +5,7 @@ import { Phone } from "./core/Phone";
 export const Contacts: React.FC = () => {
   return (
     <BulletedList
-      id="contacts"
+      className="contacts"
       bullets={[
         "City, Country",
         <Phone countryCode="+999" number="999999999" />,

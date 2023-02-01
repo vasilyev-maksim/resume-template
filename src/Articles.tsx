@@ -4,7 +4,7 @@ import { Section } from "./core/Section";
 
 export const Articles: React.FC = () => {
   return (
-    <Section id="articles" header="Articles">
+    <Section header="Articles">
       <BulletedList
         bullets={[
           {

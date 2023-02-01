@@ -5,9 +5,9 @@ export const Subsection: React.FC<{
   children: React.ReactNode;
 }> = ({ header, children }) => {
   return (
-    <section className="subsection">
+    <div className="subsection">
       <header>{header}</header>
       {children}
-    </section>
+    </div>
   );
 };

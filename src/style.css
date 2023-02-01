@@ -2,52 +2,35 @@ html * {
   line-height: 1.5em;
 }
 
-#layout {
-  display: grid;
-  column-gap: 4.5rem;
-}
-
-#name {
-  grid-area: name;
+.name {
   margin: 0;
   font-size: 2.5rem;
 }
 
-#bio {
-  grid-area: bio;
+.bio {
   margin: 0;
   margin-top: 2rem;
 }
 
-#contacts {
-  align-self: center;
-  grid-area: contacts;
+.contacts {
   margin: 0;
+  margin-top: 1rem;
+  list-style: none;
+  padding-inline-start: 0;
 }
 
-#experience {
-  grid-area: experience;
-}
-
-#skills {
-  grid-area: skills;
-}
-
-#langs {
-  grid-area: langs;
-}
-
-#articles {
-  grid-area: articles;
-}
-
-#education {
-  grid-area: education;
+@page {
+  margin: 1rem;
+  margin-top: 2rem;
 }
 
 @media print {
   html {
-    font-size: 9.2px;
+    font-size: 10px;
+  }
+
+  .subsection {
+    break-inside: avoid;
   }
 }
 
@@ -57,7 +40,7 @@ html * {
   }
 }
 
-/* > 1200px */
+/* > 1200px, desktop */
 @media screen and (min-width: 1200px) {
   body {
     width: calc(1200px - 5rem);
@@ -66,47 +49,27 @@ html * {
   }
 }
 
-/* < 1000px */
-@media screen and (max-width: 1000px) {
-  #layout {
-    grid-template-areas:
-      "name"
-      "contacts"
-      "bio"
-      "articles"
-      "skills"
-      "experience"
-      "education"
-      "langs";
+/* > 1000px */
+@media print, screen and (min-width: 1000px) {
+  .desktop.layout {
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
   }
 
-  #contacts li {
-    list-style: none;
-  }
-
-  #contacts {
-    margin-top: 1rem;
-    padding-inline-start: 0;
+  .mobile.layout {
+    display: none;
   }
 }
 
-/* > 1000px */
-@media print, screen and (min-width: 1000px) {
-  #layout {
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "name contacts"
-      "bio contacts"
-      "articles skills"
-      "experience skills"
-      "experience langs"
-      "experience ."
-      "education .";
+/* < 1000px, mobile */
+@media screen and (max-width: 1000px) {
+  .desktop.layout {
+    display: none;
   }
 
-  #contacts {
-    list-style: none;
-    padding-inline-start: 0;
+  .mobile.layout {
+    display: block;
   }
 }
 

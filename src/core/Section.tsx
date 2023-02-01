@@ -6,9 +6,9 @@ export const Section: React.FC<{
   id?: string;
 }> = ({ header, children, id }) => {
   return (
-    <section id={id} className="section">
+    <div id={id} className="section">
       <header>{header}</header>
       {children}
-    </section>
+    </div>
   );
 };

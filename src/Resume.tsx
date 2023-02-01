@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Articles } from "./Articles";
+import { Bio } from "./Bio";
 import { Contacts } from "./Contacts";
-import { BulletedList } from "./core/BulletedList";
-import { Section } from "./core/Section";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
-import { Skills } from "./Skills";
+import { HardSkills } from "./HardSkills";
+import { Languages } from "./Languages";
+import { SoftSkills } from "./SoftSkills";
 
 export const Resume: React.FC = () => {
   const name = "John Doe";
@@ -37,23 +38,32 @@ export const Resume: React.FC = () => {
       </head>
 
       <body>
-        <div id="layout">
-          <h1 id="name">{name}</h1>
-          <p id="bio">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+        <div className="desktop layout">
+          <div className="left">
+            <h1 className="name">{name}</h1>
+            <Bio />
+            <Articles />
+            <Experience />
+            <Education />
+          </div>
+          <div className="right" style={{ minWidth: "22rem" }}>
+            <Contacts />
+            <HardSkills />
+            <SoftSkills />
+            <Languages />
+          </div>
+        </div>
 
+        <div className="mobile layout">
+          <h1 className="name">{name}</h1>
           <Contacts />
+          <Bio />
+          <Articles />
+          <HardSkills />
+          <SoftSkills />
           <Experience />
           <Education />
-          <Skills />
-          <Section id="langs" header="Languages">
-            <BulletedList bullets={["English", "Spanish", "French"]} />
-          </Section>
-          <Articles />
+          <Languages />
         </div>
       </body>
     </html>

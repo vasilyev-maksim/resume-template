@@ -4,7 +4,7 @@ import { Section } from "./core/Section";
 
 export const Education: React.FC = () => {
   return (
-    <Section id="education" header="Education">
+    <Section header="Education">
       <EducationItem
         institution={{
           name: "MIT",
