@@ -1609,9 +1609,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resume@workspace:.":
+"resume-template@workspace:.":
   version: 0.0.0-use.local
-  resolution: "resume@workspace:."
+  resolution: "resume-template@workspace:."
   dependencies:
     "@types/node": ^18.11.18
     "@types/react-dom": ^18.0.10

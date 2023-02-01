@@ -1,5 +1,11 @@
 {
-  "name": "resume",
+  "name": "resume-template",
+  "author": {
+    "name": "Maksim Vasilyev",
+    "email": "vasilyev.maksim93@gmail.com",
+    "url": "https://medium.com/@vasilyev-maksim"
+  },
+  "license": "MIT",
   "packageManager": "yarn@3.3.1",
   "dependencies": {
     "react": "^18.2.0",
