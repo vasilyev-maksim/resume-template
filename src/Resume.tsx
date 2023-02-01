@@ -59,8 +59,12 @@ export const Resume: React.FC = () => {
           <Contacts />
           <Bio />
           <Articles />
-          <HardSkills />
-          <SoftSkills />
+          <div className="two columns">
+            <div style={{ marginRight: '5rem' }}>
+              <HardSkills />
+            </div>
+            <SoftSkills />
+          </div>
           <Experience />
           <Education />
           <Languages />

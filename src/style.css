@@ -124,3 +124,8 @@ body {
 .subsection > .description {
   margin-top: 1rem;
 }
+
+.two.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
