@@ -14,7 +14,7 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "open": "open-cli index.html",
+    "open": "open-cli ./dist/index.html",
     "dev": "tsnd --respawn ./src/server.tsx",
     "build": "tsnd ./src/server.tsx"
   },

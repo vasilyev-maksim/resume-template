@@ -34,7 +34,7 @@ export const Resume: React.FC = () => {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         />
-        <link rel="stylesheet" href="./src/style.css" />
+        <link rel="stylesheet" href="./style.css" />
       </head>
 
       <body>
