@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Section } from "./core/Section";
 import { Amazon } from "./experience/Amazon";
-import { Google } from "./experience/google";
+import { Google } from "./experience/Google";
 import { Meta } from "./experience/Meta";
 import { Netflix } from "./experience/Netflix";
 import { Spotify } from "./experience/Spotify";
