@@ -10,7 +10,16 @@ export const JobItem: React.FC<{
   dates: { from: string; to: string };
   description?: React.ReactNode;
   bullets?: IBullet[];
-}> = ({ company, location, position, dates, description, bullets }) => {
+  techStack?: string[];
+}> = ({
+  company,
+  location,
+  position,
+  dates,
+  description,
+  bullets,
+  techStack,
+}) => {
   return (
     <Subsection
       header={
@@ -27,6 +36,10 @@ export const JobItem: React.FC<{
       <div className="dates">
         {dates.from} - {dates.to}
       </div>
+
+      {techStack ? (
+        <div className="tech-stack">Stack: {techStack.join(", ")}</div>
+      ) : null}
       {description ? <div className="description">{description}</div> : null}
       {bullets ? <BulletedList bullets={bullets} /> : null}
     </Subsection>

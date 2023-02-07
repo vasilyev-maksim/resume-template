@@ -1,5 +1,6 @@
 html * {
   line-height: 1.5em;
+  font-variant-numeric: lining-nums;
 }
 
 .name {
@@ -7,9 +8,16 @@ html * {
   font-size: 2.5rem;
 }
 
+.job-title {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
 .bio {
   margin: 0;
   margin-top: 2rem;
+  text-align: justify;
 }
 
 .contacts {
@@ -20,13 +28,12 @@ html * {
 }
 
 @page {
-  margin: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 1rem;
 }
 
 @media print {
   html {
-    font-size: 11px;
+    font-size: 10.3px;
   }
 
   .subsection {
@@ -81,7 +88,7 @@ a:active {
 }
 
 ul {
-  padding-inline-start: 2rem;
+  padding-inline-start: 1rem;
 }
 
 body {
@@ -116,9 +123,14 @@ body {
   font-size: 1.1rem;
 }
 
-.dates {
+.dates,
+.tech-stack {
+  font-size: 0.85rem;
   color: rgb(83, 83, 83);
-  font-size: 0.8rem;
+}
+
+.tech-stack {
+  margin-top: 0.6rem;
 }
 
 .subsection > .description {

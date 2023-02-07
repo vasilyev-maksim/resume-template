@@ -46,7 +46,7 @@ export const Resume: React.FC = () => {
             <Experience />
             <Education />
           </div>
-          <div className="right" style={{ minWidth: "22rem" }}>
+          <div className="right" style={{ minWidth: "18rem" }}>
             <Contacts />
             <HardSkills />
             <SoftSkills />
@@ -60,7 +60,7 @@ export const Resume: React.FC = () => {
           <Bio />
           <Articles />
           <div className="two columns">
-            <div style={{ marginRight: '5rem' }}>
+            <div style={{ marginRight: "5rem" }}>
               <HardSkills />
             </div>
             <SoftSkills />

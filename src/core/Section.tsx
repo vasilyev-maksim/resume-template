@@ -3,10 +3,9 @@ import * as React from "react";
 export const Section: React.FC<{
   header: React.ReactNode;
   children: React.ReactNode;
-  id?: string;
-}> = ({ header, children, id }) => {
+}> = ({ header, children }) => {
   return (
-    <div id={id} className="section">
+    <div className="section">
       <header>{header}</header>
       {children}
     </div>
