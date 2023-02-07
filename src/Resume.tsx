@@ -2,6 +2,7 @@ import * as React from "react";
 import { Articles } from "./Articles";
 import { Bio } from "./Bio";
 import { Contacts } from "./Contacts";
+import { Header } from "./core/Header";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
 import { HardSkills } from "./HardSkills";
@@ -10,7 +11,7 @@ import { SoftSkills } from "./SoftSkills";
 
 export const Resume: React.FC = () => {
   const name = "John Doe";
-  const position = "Frontend Developer";
+  const jobTitle = "Frontend Developer";
 
   return (
     <html lang="en">
@@ -18,7 +19,7 @@ export const Resume: React.FC = () => {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{name + " - " + position}</title>
+        <title>{name + " - " + jobTitle}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -40,7 +41,7 @@ export const Resume: React.FC = () => {
       <body>
         <div className="desktop layout">
           <div className="left">
-            <h1 className="name">{name}</h1>
+            <Header name={name} jobTitle={jobTitle} />
             <Bio />
             <Articles />
             <Experience />
@@ -55,7 +56,7 @@ export const Resume: React.FC = () => {
         </div>
 
         <div className="mobile layout">
-          <h1 className="name">{name}</h1>
+          <Header name={name} jobTitle={jobTitle} />
           <Contacts />
           <Bio />
           <Articles />
